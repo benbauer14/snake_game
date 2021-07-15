@@ -1,4 +1,5 @@
 from turtle import Screen, Turtle
+import snake
 import time
 
 
@@ -24,6 +25,7 @@ for position in starting_positions:
     new_segment.goto(position)
     segments.append(new_segment)
     screen.update()
+
 
 game_over = False
 while game_over == False:
