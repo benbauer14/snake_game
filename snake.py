@@ -20,6 +20,14 @@ class Snake:
             newx = self.segments[seg - 1].xcor()
             newy = self.segments[seg - 1].ycor()
             self.segments[seg].goto(newx, newy)
+        if(self.segments[0].xcor() >= 300 ):
+            self.segments[0].goto(-300, self.segments[0].ycor())
+        elif(self.segments[0].xcor() <= -300):
+            self.segments[0].goto(300, self.segments[0].ycor())
+        if(self.segments[0].ycor() >= 250 ):
+            self.segments[0].goto(self.segments[0].xcor(), -250)
+        elif(self.segments[0].ycor() <= -250):
+            self.segments[0].goto(self.segments[0].xcor(), 250)
         self.segments[0].forward(MOVE_DISTANCE)
     
     def left(self):
