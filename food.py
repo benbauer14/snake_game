@@ -11,8 +11,8 @@ class Food(Turtle):
         self.shapesize(0.5, 0.5)
         self.color("red")
         self.speed(0)
-        self.goto(random.randint(-290, 290), random.randint(-290, 290))
+        self.goto(random.randint(-275, 275), random.randint(-275, 275))
     
     def eaten(self):
-        self.goto(random.randint(-290, 290), random.randint(-290, 290))
+        self.goto(random.randint(-275, 275), random.randint(-275, 275))
         
